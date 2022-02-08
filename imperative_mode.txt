@@ -1,7 +1,13 @@
+# create pod pod_name
 kubect run pod_name --image=nginx:latest
 
+# get pods
 kubectl get pods --watch
 
+# describe specific pod
+kubectl describe pod pod_name
+
+# edit specific pod
 kubectl describe pod pod_name
 
 # aplica declaracoes do yaml
