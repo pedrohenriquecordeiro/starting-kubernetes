@@ -1,8 +1,9 @@
 # create pod pod_name
-kubect run pod_name --image=nginx:latest
+kubectl run pod_name --image=nginx:latest
 
 # get pods
 kubectl get pods --watch
+kubectl get pods -o wide
 
 # describe specific pod
 kubectl describe pod pod_name
@@ -12,3 +13,17 @@ kubectl describe pod pod_name
 
 # aplica declaracoes do yaml
 kubectl apply -f .\file.yaml
+
+# deleta pod
+kubectl delete pod pod_name # imperativo
+kubectl delete pod -f .\file.yaml
+
+# executa comandos no bash, dentro do pod - vai abrir um bash
+kubectl exec -it pod_name -- bash
+
+# get services
+kubectl get services
+kubectl get svc
+
+# get contexts 
+kubectl config get-contexts
