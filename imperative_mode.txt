@@ -1,0 +1,8 @@
+kubect run pod_name --image=nginx:latest
+
+kubectl get pods --watch
+
+kubectl describe pod pod_name
+
+# aplica declaracoes do yaml
+kubectl apply -f .\file.yaml
