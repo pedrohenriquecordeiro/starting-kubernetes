@@ -5,10 +5,9 @@ metadata:
 spec:
     type: NodePort                 # eh tbm um cluster ip
     selector:
-        app: label_pod_1           # servico aponta para o pod 1 - usa label do pod_1
+        app: label_pod_1           # expoe o pod_1 para o mundo externo
     ports: 
       - port: 80                   # escuta pela porta 80 
       targetPort : 80              # envia para a porta 80 do pod_1
       nodePort: 3000               # bind da porta
-    selector :
-      app: label_pod_1             # expoe o pod_1 para o mundo externo
+            

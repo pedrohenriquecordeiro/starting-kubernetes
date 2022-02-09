@@ -4,8 +4,6 @@ metadata:
     name: load_balancer
 spec:
     type: LoadBalancer             # é um node port - consequentemente eh tbm um cluster ip
-    selector:
-        app: label_pod_1           # servico aponta para o pod 1 - usa label do pod_1
     ports: 
       - port: 80                   # escuta pela porta 80 
       targetPort : 80              # envia para a porta 80 do pod_1
