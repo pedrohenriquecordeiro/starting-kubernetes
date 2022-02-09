@@ -27,3 +27,5 @@ kubectl get svc
 
 # get contexts 
 kubectl config get-contexts
+
+kubectl get configmap

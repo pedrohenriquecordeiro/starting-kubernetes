@@ -10,10 +10,4 @@ spec:
         image: path/mysql-db:1
         ports:
           - containerPort: 3306
-    env: # variaveis do mysql
-      - name: "MYSQL_ROOT_PASSWORD"
-        value: "q1w2e3r4"
-      - name: "MYSQL_DATABASE"
-        value: "db"
-      - name: "MYSQL_PASSWORD"
-        value : "q1w2e3r4"
+    
