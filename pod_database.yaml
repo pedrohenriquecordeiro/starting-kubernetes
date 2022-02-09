@@ -10,20 +10,6 @@ spec:
         image: path/mysql-db:1
         ports:
           - containerPort: 3306
-        env:
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                name: database-configmap
-                key: MYSQL_ROOT_PASSWORD
-          - name: MYSQL_DATABASE
-            valueFrom:
-              configMapKeyRef:
-                name: database-configmap
-                key: MYSQL_DATABASE
-          - name: MYSQL_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                name: database-configmap
-                key: MYSQL_PASSWORD
-    
+        envFrom:
+          -configMapRef:
+            name: database-configmap
