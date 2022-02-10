@@ -6,7 +6,7 @@ metadata:
         app: label_pod_db
 spec:
     containers:
-        - name: db-container
+      - name: db-container
         image: path/mysql-db:1
         ports:
           - containerPort: 3306

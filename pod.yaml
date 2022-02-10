@@ -6,7 +6,7 @@ metadata:
         app: label_pod_1
 spec:
     containers:
-        - name: nginx-container
+    -   name: nginx-container
         image: nginx-stable
         ports:
           - containerPort: 80

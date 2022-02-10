@@ -9,7 +9,7 @@ kubectl get pods -o wide
 kubectl describe pod pod_name
 
 # edit specific pod
-kubectl describe pod pod_name
+kubectl edit pod pod_name
 
 # aplica declaracoes do yaml
 kubectl apply -f .\file.yaml
@@ -28,4 +28,27 @@ kubectl get svc
 # get contexts 
 kubectl config get-contexts
 
+# get configmap
 kubectl get configmap
+
+# get replicasets
+kubectl get replicasets
+
+# get deployments
+kubectl get deployments
+
+# create deployment and store in history
+kubectl apply -f deployment.yaml --record
+
+# see versions
+kubectl rollout history deployment deployment_name
+
+#documentando
+kubectl annotate deployment deployment_name kubernetes.io/change-cause="documentacao do deployment aqui"
+
+# got back
+kubectl rollout undo deployment deployment_name --to-revision=1
+
+
+
+

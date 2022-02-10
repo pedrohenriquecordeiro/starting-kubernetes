@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment # eh semelhante ao ReplicaSet - porem permite versionamento
+metadata: 
+  name: replica-ReplicaSet
+spec: # replica o pod-1
+  template:
+    metadata: 
+      name: pod-1
+      labels:
+        app: label_pod_1
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx-stable
+        ports:
+          - containerPort: 80 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: label_pod_1
